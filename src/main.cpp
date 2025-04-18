@@ -11,8 +11,10 @@ int main() {
     std::vector<double> A(N*N), B(N*N), C(N*N);
     Eigen::MatrixXd eA(N, N), eB(N, N), eC(N, N);
 
-    // Fill random
-    std::mt19937 gen(0);
+    // Mersenne-Twister generator
+    std::mt19937 gen;
+    gen.seed(0);
+
     std::uniform_real_distribution<> dist(-1.0, 1.0);
     for (std::size_t i = 0; i < N*N; ++i) {
         A[i] = B[i] = dist(gen);
