@@ -9,6 +9,7 @@ pulls ubuntu, installs compiler and libs, copy source, build it, tag final image
 **docker run:**
 ```
 docker run --rm \
+  --gpus all \
   -e DISPLAY=$DISPLAY \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   cpp_sandbox
