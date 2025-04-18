@@ -8,6 +8,7 @@ RUN apt-get update \
     g++-12 \
     ccache \
     git \
+    libeigen3-dev \
     libglm-dev \
     libglfw3-dev \
  && rm -rf /var/lib/apt/lists/*
